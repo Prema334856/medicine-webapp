@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Responsiive Admin Dashboard | Spring Store</title>
+    <link rel="stylesheet" href="style2.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <i class='bx bxs-bank'></i>
+            <span class="logo_name"> Admin </span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="admin.php" class="active">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="links_name">Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="message.php">
+                    <i class='bx bx-box'></i>
+                    <span class="links_name">Contact</span>
+                </a>
+            </li>
+            <li>
+                <a href="order.php">
+                    <i class='bx bx-list-ul'></i>
+                    <span class="links_name">Order list</span>
+                </a>
+            </li>
+
+            <li class="log_out">
+                <a href="index.php">
+                    <i class='bx bx-log-out'></i>
+                    <span class="links_name">Log out</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <nav>
+            <div class="sidebar-button">
+                <i class='bx bx-menu sidebarBtn'></i>
+                <span class="dashboard"></span>
+            </div>
+            <div class="search-box">
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="250" style="width: 250px;">
+            </div>
+            <div class="home">
+                <a href="home.php"><i class='bx bxs-home'>
+                        <span class="links_name">Home</span></i></a>
+            </div>
+            <div class="profile-details">
+                <img src="images/profile.jpg" alt="">
+                <span class="admin_name">Admin</span>
+                <i class='bx bx-chevron-down'></i>
+            </div>
+
+        </nav>
+
+        <div class="home-content">
+           
+                <div class="container mt-5">
+                    <div class="row">
+                       
+                        <!-- Card  -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <a href=""><i class="fa-solid fa-user fa-2"></i></a>
+                                    <h5 class="card-title">Total User</h5>
+                                    <h1 class="card-text text-bold">1</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card  -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <a href=""><i class="fa-solid fa-user fa-2"></i></a>
+                                    <h5 class="card-title">Total Products</h5>
+                                    <h1 class="card-text text-bold">1</h1>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card  -->
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <a href=""><i class="fa-solid fa-user fa-2"></i></a>
+                                    <h5 class="card-title">Total Order</h5>
+                                    <h1 class="card-text text-bold">1</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".sidebarBtn");
+        sidebarBtn.onclick = function() {
+            sidebar.classList.toggle("active");
+            if (sidebar.classList.contains("active")) {
+                sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+            } else
+                sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+        }
+    </script>
+
+</body>
+
+</html>
